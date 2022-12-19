@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="with=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Melco Escobar</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+var checkLoginPass = function () {
+  var login = document.getElementById("email").value;
+  var pass = document.getElementById("pass").value;
+  if (login === "test" && pass === "123") {
+    location.replace("http://www.google.com");
+  }
+  else {
+      //do something else;
+  }
+};
+<body>
+    <section class = "header">
+    <nav>
+      <div class="nav-links-left">
+          <ul>
+             <li><a href="index.html">Home</a></li>
+             <li><a href="about.html">About</a></li>
+             <li><a href="services.html">Services</a></li>
+             <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+    </nav>
+    </section>
+    <section class = "sub-header">
+        <h1>Sign In</h1>
+        <div class="container">
+            <!-- <form action="login_page.php"> -->
+              <form action = "checkLoginPass()" >
+              <label for="email">Email</label>
+              <input type="text" id="email" name="Email" placeholder="email Id">
+          
+              <label for="pass">Password</label>
+              <input type="text" id="pass" name="pass" placeholder="password">
+
+              <input type="submit" value="Submit" onclick="checkLoginPass()" value="LogIn">
+              <!-- <input type="submit" id="goButton" onclick="checkLoginPass()" value="Log In"/> -->
+              <p class = "signup" >New User? <a href="register.html">SignUp</a></p> 
+              <p class = "signup" >Forgot password? <a href="#">Forgot password</a></p>
+          </div>
+    </section>
+    
+    <section class = "footer">
+      <h4>About Us</h4>
+      <p>To know more about market place please visit our social media sites</p>
+      <div class = "icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+      </div>
+    </section>
+</body>
+</html>
